@@ -4,7 +4,8 @@ clear
 str_exe1='.tif';
 str_inputpath='..\Data';
 
-PatchSize=4; SlideWidth=2;
+PatchSize=4; SlideWidth=2;  %% define the parameters
+
 [Multi_Data,Multi_DataMask]=ReadTensorData(str_inputpath);
 I_DL=Multitemporal_ReconstructionD_5_improved3(Multi_Data,Multi_DataMask,SlideWidth,PatchSize,str_inputpath);
 for i=1:size(Multi_DataMask,3)
